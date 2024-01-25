@@ -11,9 +11,9 @@ package algorithms;
  */
 class BinarySearch 
 { 
-    // Returns index of x if it is present in arr[l.. 
+    // Returns index of y if it is present in arr[l..
     // r], else return -1 
-    int binarySearch(int[] arr, int l, int r, int x)
+    int binarySearch(int[] arr, int l, int r, int y)
     { 
         if (r>=l) 
         { 
@@ -21,17 +21,17 @@ class BinarySearch
    
             // If the element is present at the  
             // middle itself 
-            if (arr[mid] == x) 
+            if (arr[mid] == y)
                return mid; 
    
             // If element is smaller than mid, then  
             // it can only be present in left sub-array
-            if (arr[mid] > x) 
-               return binarySearch(arr, l, mid-1, x); 
+            if (arr[mid] > y)
+               return binarySearch(arr, l, mid-1, y);
    
             // Else the element can only be present 
             // in right sub-array
-            return binarySearch(arr, mid+1, r, x); 
+            return binarySearch(arr, mid+1, r, y);
         } 
    
         // We reach here when element is not present 
